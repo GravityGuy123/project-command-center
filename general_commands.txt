@@ -1,0 +1,118 @@
+🔹 Option 1: Restart Windows Explorer (Most Common & Useful)
+
+This restarts:
+
+Taskbar
+File Explorer
+Desktop
+Many UI-related issues
+
+Method A: Using Command Prompt or Powershell
+
+Open Command Prompt and run:
+
+
+taskkill /f /im explorer.exe
+start explorer.exe
+
+
+This:
+
+Kills Explorer
+Starts it again fresh
+
+Very useful when:
+	Taskbar freezes
+	Start menu not responding
+	UI glitches
+
+
+Method B: Using Task Manager (No command)
+	Press Ctrl + Shift + Esc
+	Find Windows Explorer
+	Right-click → Restart
+	This is the cleanest UI-level restart.
+
+
+
+
+🔹 Option 2: Restart All User Apps (Log Off & Back In)
+
+This closes:
+	All user apps
+	Restarts your user session
+	But does not reboot the PC
+
+Command:
+
+shutdown /l
+
+
+This logs you out, then you log back in.
+
+This is the closest to:
+
+“Restart everything except the actual power cycle.”
+
+🔹 Option 3: Restart Specific System Services (Advanced)
+
+For example, restart Windows Audio:
+
+net stop audiosrv
+net start audiosrv
+
+
+Or restart networking:
+
+ipconfig /release
+ipconfig /renew
+
+
+Useful if only one part of the system is misbehaving.
+
+❗ Important Truth
+
+There is no safe way to:
+	Fully reset all system state
+	Clear kernel memory
+	Reload drivers
+
+without an actual reboot.
+Some things (drivers, kernel, low-level services) only reset on reboot.
+
+
+
+When apps are acting strange:
+
+First try:
+
+taskkill /f /im explorer.exe
+start explorer.exe
+
+
+If that fails:
+
+shutdown /l
+
+
+(log out & log back in)
+
+If still bad:
+→ Do a full restart.
+
+
+
+
+✅ How to Run It from Git Bash (Correct Way)
+
+Use this:
+
+cmd.exe /c shutdown /l
+
+
+
+🔹 Same for Explorer Restart from Git Bash
+If you want to restart Explorer from Git Bash:
+
+cmd.exe /c taskkill /f /im explorer.exe
+cmd.exe /c start explorer.exe
