@@ -1,7 +1,55 @@
 // // COMMANDS
+// // Run port 3000
+// npm run dev -- -p 3000 -H localhost
+// next dev -p 3000 -H 127.0.0.1
+
 // git branch -M main
+
+// # Add remote and push
 // git remote add origin https://github.com/GravityGuy123/react-fundamentals-lab.git
 // git push -u origin main
+
+// // Check remote
+// git remote -v
+
+// // Remove remote
+// git remote remove origin
+
+
+// ✅ 1️⃣ git push origin main
+// This simply means:
+// 👉 Push the local branch main to the remote repository named origin.
+// It does NOT set any long-term tracking relationship.
+
+
+// ✅ 2️⃣ git push -u origin main
+// The -u means:
+// 👉 Set upstream (tracking) branch
+// This tells Git:
+// 👉 “My local main branch should track origin/main.”
+
+// # After running this ONCE:
+// # You can just do:
+// git push
+
+
+// // Reset to main branch
+// git reset --hard main
+
+// // Remaning Files
+// git mv public/Logo_1.png public/logo_1__tmp.png
+// git mv public/Logo_2.png public/logo_2__tmp.png
+// git commit -m "chore: force rename logo assets (tmp)"
+// git push
+
+// git mv public/logo_1__tmp.png public/logo_1.png
+// git mv public/logo_2__tmp.png public/logo_2.png
+// git commit -m "chore: normalize logo asset casing"
+// git push
+
+
+// Limit Ram Usage (VSCode)
+// code --max-old-space-size=2048
 
 
 // // A. Install Next.js
@@ -17,7 +65,7 @@
 
 
 // // 2. Install Dependencies
-// npm i   ||  npm install
+// npm i  ||  npm install
 
 
 // // 3. Shadcn Components
@@ -190,6 +238,18 @@
 // 10. 
 // cat .env
 // cat .env.local
+
+
+// 11. Install tree-cli globally to view directory structure
+// npm i -g tree-cli
+
+
+// 12. View the directory structure
+// tree src/app
+
+
+// 13. View directory structure of a specific folder with files
+// powershell -NoProfile -Command "tree src\app /F"
 
 
 // // 💡 Pro Tip:

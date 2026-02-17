@@ -1,0 +1,68 @@
+1. 
+https://www.w3schools.com/
+
+2. 
+https://pagespeed.web.dev/
+
+3.
+
+
+4.
+https://supabase.com/
+
+5. Subtitle Downloader
+https://downsub.com/
+
+6. Interview Questions
+https://leetcode.com/
+
+7. Verify Note and Generated Information
+https://notebooklm.google.com/
+
+8. Amaechi Friend Techhub
+https://www.regnumtechhub.com/
+
+9. Google Mail
+https://gmail.com/
+https://mail.google.com/
+
+10. Course Pilot
+https://course-pilothq.vercel.app/
+
+
+AI MODELS
+11. Claude
+https://claude.ai/
+
+12. Chatgpt
+https://chatgpt.com/
+
+13. Google Gemini
+https://gemini.google.com/
+
+14. 
+
+
+COLLABORATION AND CODE STORAGE
+15. Github
+https://github.com/
+
+16. BitBucket
+
+
+
+HOSTING SERVICE
+Frontend
+
+15. Vercel
+https://vercel.com/
+
+16. Netlify
+https://app.netlify.com/
+
+17. Github Pages
+
+
+Backend
+18. Render
+http://dashboard.render.com/web/

@@ -1,3 +1,4 @@
+1. Restart Windows Explorer:
 🔹 Option 1: Restart Windows Explorer (Most Common & Useful)
 
 This restarts:
@@ -35,7 +36,7 @@ Method B: Using Task Manager (No command)
 
 
 
-
+2. Restart All Apps:
 🔹 Option 2: Restart All User Apps (Log Off & Back In)
 
 This closes:
@@ -51,11 +52,10 @@ shutdown /l
 This logs you out, then you log back in.
 
 This is the closest to:
-
 “Restart everything except the actual power cycle.”
 
-🔹 Option 3: Restart Specific System Services (Advanced)
 
+🔹 Option 3: Restart Specific System Services (Advanced)
 For example, restart Windows Audio:
 
 net stop audiosrv
@@ -69,7 +69,6 @@ ipconfig /renew
 
 
 Useful if only one part of the system is misbehaving.
-
 ❗ Important Truth
 
 There is no safe way to:
@@ -116,3 +115,104 @@ If you want to restart Explorer from Git Bash:
 
 cmd.exe /c taskkill /f /im explorer.exe
 cmd.exe /c start explorer.exe
+
+
+🔹 3. Close Microsoft Edge
+cmd.exe /c taskkill /f /im msedge.exe
+
+
+🔹 Close and restart Microsoft Edge
+cmd.exe /c taskkill /f /im msedge.exe && start msedge.exe
+
+
+
+
+
+🔹 4. Close Google Chrome
+cmd.exe /c taskkill /f /im chrome.exe
+
+🔹 Close and restart Google Chrome
+cmd.exe /c taskkill /f /im chrome.exe && start chrome.exe
+
+
+
+
+
+5. Quick Commands (run directly in CMD / Run dialog)
+
+a. Close Browsers
+taskkill /f /im chrome.exe
+taskkill /f /im msedge.exe
+taskkill /f /im firefox.exe
+
+b. Close Dev Tools / Editors
+taskkill /f /im Code.exe        :: VS Code
+taskkill /f /im idea64.exe      :: IntelliJ / WebStorm
+taskkill /f /im phpstorm64.exe  :: PhpStorm
+
+c. Close Terminals / Git Bash
+taskkill /f /im cmd.exe
+taskkill /f /im powershell.exe
+taskkill /f /im git-bash.exe
+
+
+
+🔹 6. Kill All Node / React / Next.js Servers (Very Useful 🔥)
+
+When npm run dev or next dev is stuck:
+taskkill /f /im node.exe
+
+
+🔹 3. Full Dev Reset Batch File (Recommended)
+
+You can create one file that resets everything at once.
+
+Step 1 – Create the file
+
+Right-click Desktop → New → Text Document
+
+Rename it to:
+🔹 3. Full Dev Reset Batch File (Recommended)
+
+You can create one file that resets everything at once.
+
+Step 1 – Create the file
+Right-click Desktop → New → Text Document
+
+Rename it to:
+dev-reset.bat
+
+
+Step 2 – Paste this inside
+@echo off
+echo Closing browsers...
+taskkill /f /im chrome.exe >nul 2>&1
+taskkill /f /im msedge.exe >nul 2>&1
+taskkill /f /im firefox.exe >nul 2>&1
+
+echo Closing editors...
+taskkill /f /im Code.exe >nul 2>&1
+
+echo Closing Node servers...
+taskkill /f /im node.exe >nul 2>&1
+
+echo Restarting Explorer...
+taskkill /f /im explorer.exe >nul 2>&1
+start explorer.exe
+
+echo Done! Dev environment reset.
+pause
+
+
+Now anytime your system or dev tools freeze:
+👉 Double-click dev-reset.bat and everything resets cleanly.
+
+
+
+🔹 4. Extra Power (Optional)
+Kill by Port (if only one server is stuck on port 3000 for example)
+
+netstat -ano | findstr :3000
+taskkill /f /pid <PID>
+
+

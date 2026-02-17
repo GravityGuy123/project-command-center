@@ -1,3 +1,50 @@
+### COMMANDS
+# git branch -M main
+
+## Add remote and push
+# git remote add origin https://github.com/GravityGuy123/react-fundamentals-lab.git
+# git push -u origin main
+
+## Check remote
+# git remote -v
+
+## Remove remote
+# git remote remove origin
+
+# ✅ 1️⃣ git push origin main
+# This simply means:
+# 👉 Push the local branch main to the remote repository named origin.
+# It does NOT set any long-term tracking relationship.
+
+
+# ✅ 2️⃣ git push -u origin main
+# The -u means:
+# 👉 Set upstream (tracking) branch
+# This tells Git:
+# 👉 “My local main branch should track origin/main.”
+
+# # After running this ONCE:
+# # You can just do:
+# git push
+
+## Reset to main branch
+# git reset --hard main
+
+## Remaning Files
+# git mv public/Logo_1.png public/logo_1__tmp.png
+# git mv public/Logo_2.png public/logo_2__tmp.png
+# git commit -m "chore: force rename logo assets (tmp)"
+# git push
+
+# git mv public/logo_1__tmp.png public/logo_1.png
+# git mv public/logo_2__tmp.png public/logo_2.png
+# git commit -m "chore: normalize logo asset casing"
+# git push
+
+## Limit Ram Usage (VSCode)
+# code --max-old-space-size=2048P
+
+
 ### Reload Virtual Studio Code
 # Ctrl + Shift + P → Reload Window
 
@@ -62,6 +109,13 @@
 # python manage.py createsuperuser
 
 # $ python manage.py createsuperuser
+### CoursePilot
+# Email: de_bossq2@gmail.com
+# Username: De_BossQ2
+# Full name: De Boss
+# Password: @Sonic101
+
+
 ### SecureQLedger
 # Email: da_bossq2@gmail.com
 # first name: Da_boss
@@ -102,9 +156,20 @@
 # python manage.py makemigrations plans
 
 # # C. Delete __pycache__ folders
-# find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null
-# find admin_panel -type d -name "__pycache__" -exec rm -r {} +
-# find plans -type d -name "__pycache__" -exec rm -r {} +
+#  find . -path "*/migrations/*.pyc" -delete
+# find . -path "*.pyc" -delete
+# find . -path "*/migrations/*.py" ! -name "__init__.py" -delete
+# rm db.sqlite3
+
+# D. Reset Migrations (if necessary)
+# # ⚠️ CRITICAL warnings before running migrations reset
+# Only do this if ONE of these is true:
+# i. You are still in local development, OR
+# ii. You are okay with wiping and rebuilding the database, OR
+# iii. You have not deployed stable data yet
+
+# 🚨 Never reset migrations on a production database with real data.
+# It will break schema history and may cause data loss.
 
 
 # # 10. Apply the migrations to the database
@@ -501,3 +566,17 @@
 #  Frontend communicates with backend
 
 #  CORS configured correctly
+
+
+# # Confirm Database
+# python manage.py shell
+# import os; from django.db import connection; print({
+#   "DATABASE_URL_SET": bool(os.getenv("DATABASE_URL")),
+#   "DB_VENDOR": connection.vendor
+# })
+
+
+# # Confirm DNS
+# nslookup db.czeeljnaqnbbrhqtltix.supabase.co
+
+# nslookup google.com
